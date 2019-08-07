@@ -13,7 +13,7 @@ public class StartGame {
    
    public static void main (String[] args) {
 
-      CardGame Start_Game = new CardGame();
+      CardGame Start_Game = new CardGame(); // create an instance variable
       Start_Game.StartGame();
 
    }
