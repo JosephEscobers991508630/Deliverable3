@@ -3,7 +3,7 @@ package gameproject;
 /**
  * Joseph Escober
  * Java Project - Deliverable 3 - Card Game
- * SYST17796
+ * SYST17796 - Group 6
  */
 
 public class StartGame {
