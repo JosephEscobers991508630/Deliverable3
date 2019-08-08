@@ -6,9 +6,8 @@ package gameproject;
  * SYST17796 - Group 6
  */
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+
 
 public class CardArrayList
 {
