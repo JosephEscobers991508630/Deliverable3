@@ -41,8 +41,22 @@ public class CardGame {
 
    public CardGame () {
 
-      initializeVariables();
+      cardList = new CardArrayList();
+      finalCardDeck = cardList.prepareDeckCard();
+      handCard1 = new ArrayList<UNOCard>();
+      handCard2 = new ArrayList<UNOCard>();
+      dumpStackofCards = new ArrayList<UNOCard>();
+      specialCards = cardList.prepareDeckSpecialCard();
+      normalCards = cardList.prepareDeckNormalCard();
 
+      namePlayer1 = "";
+      namePlayer2 = "";
+      colorFlagFirst = false;
+      colorFlagSecond = false;
+      cardSpecialFlag = false;
+      firstTimeToPlay = true;
+
+      
       for (int i = 0; i < numUNOCards; i++) {
            handCard1.add((UNOCard) finalCardDeck.get(finalCardDeck.size() - 1));
            finalCardDeck.remove(finalCardDeck.size() - 1);
@@ -251,24 +265,6 @@ public class CardGame {
       }
    }
 
-   public void initializeVariables ()
-   {
-      cardList = new CardArrayList();
-      finalCardDeck = cardList.prepareDeckCard();
-      handCard1 = new ArrayList<UNOCard>();
-      handCard2 = new ArrayList<UNOCard>();
-      dumpStackofCards = new ArrayList<UNOCard>();
-      specialCards = cardList.prepareDeckSpecialCard();
-      normalCards = cardList.prepareDeckNormalCard();
-
-      namePlayer1 = "";
-      namePlayer2 = "";
-      colorFlagFirst = false;
-      colorFlagSecond = false;
-      cardSpecialFlag = false;
-      firstTimeToPlay = true;
-
-   }
 
    public boolean checkCardSpecial (int value, List<UNOCard> list)
    {
