@@ -124,14 +124,7 @@ public class CardArrayListTest
       // fail("The test case is a prototype.");
    }
 
-   /**
-    * Test of startPlay method, of class CardArrayList.
-    */
-
-   /**
-    * Test of beginPlay method, of class CardArrayList.
-    */
-
+   
 
    /**
     * Test of startPlayColor method, of class CardArrayList.
