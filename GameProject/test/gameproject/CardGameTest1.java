@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package gameproject;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import org.junit.Test;
 /**
  *
  * @author joseph
+ * Group 6
  */
 public class CardGameTest1
 {
