@@ -7,6 +7,7 @@ package gameproject;
 
 import java.util.List;
 import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -45,7 +46,7 @@ public class CardArrayListTest
    {
       System.out.println("prepareDeckCard");
       CardArrayList instance = new CardArrayList();
-      List<UNOCard> expResult = null;
+      List<UNOCard> expResult = instance.prepareDeckCard();
       List<UNOCard> result = instance.prepareDeckCard();
       assertEquals(expResult, result);
       // TODO review the generated test code and remove the default call to fail.
@@ -60,7 +61,7 @@ public class CardArrayListTest
    {
       System.out.println("prepareDeckSpecialCard");
       CardArrayList instance = new CardArrayList();
-      List<UNOCard> expResult = null;
+      List<UNOCard> expResult = instance.prepareDeckSpecialCard();
       List<UNOCard> result = instance.prepareDeckSpecialCard();
       assertEquals(expResult, result);
       // TODO review the generated test code and remove the default call to fail.
@@ -75,7 +76,7 @@ public class CardArrayListTest
    {
       System.out.println("prepareDeckNormalCard");
       CardArrayList instance = new CardArrayList();
-      List<UNOCard> expResult = null;
+      List<UNOCard> expResult = instance.prepareDeckNormalCard();
       List<UNOCard> result = instance.prepareDeckNormalCard();
       assertEquals(expResult, result);
       // TODO review the generated test code and remove the default call to fail.
@@ -124,36 +125,11 @@ public class CardArrayListTest
    /**
     * Test of startPlay method, of class CardArrayList.
     */
-   @Test
-   public void testStartPlay ()
-   {
-      System.out.println("startPlay");
-      List<UNOCard> listCard1 = null;
-      UNOCard card = null;
-      CardArrayList instance = new CardArrayList();
-      boolean expResult = false;
-      boolean result = instance.startPlay(listCard1, card);
-      assertEquals(expResult, result);
-      // TODO review the generated test code and remove the default call to fail.
-      //   fail("The test case is a prototype.");
-   }
 
    /**
     * Test of beginPlay method, of class CardArrayList.
     */
-   @Test
-   public void testBeginPlay ()
-   {
-      System.out.println("beginPlay");
-      UNOCard card = null;
-      UNOCard otherCard = null;
-      CardArrayList instance = new CardArrayList();
-      boolean expResult = false;
-      boolean result = instance.beginPlay(card, otherCard);
-      assertEquals(expResult, result);
-      // TODO review the generated test code and remove the default call to fail.
-      //  fail("The test case is a prototype.");
-   }
+
 
    /**
     * Test of startPlayColor method, of class CardArrayList.
@@ -162,9 +138,9 @@ public class CardArrayListTest
    public void testStartPlayColor ()
    {
       System.out.println("startPlayColor");
-      List<UNOCard> listCard1 = null;
-      Color otherCardColor = null;
       CardArrayList instance = new CardArrayList();
+      List<UNOCard> listCard1 = instance.prepareDeckCard();
+      Color otherCardColor = null;
       boolean expResult = false;
       boolean result = instance.startPlayColor(listCard1, otherCardColor);
       assertEquals(expResult, result);
